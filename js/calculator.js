@@ -3,12 +3,12 @@ function criaCalculadora(){
         display: document.querySelector(".display"),
         inicia(){
             this.buttonclick();
+            
+            
         },
-
         realizaConta(){
-            let conta =this.display.value
             try{ //Esse try testa ve e se der certo ele roda
-                conta=eval(conta);//esse eval executa como um javascript, dai ele por si só resolve os dados
+                let conta =this.display.value=eval(this.display.value);//esse eval executa como um javascript, dai ele por si só resolve os dados
                 if(!conta){ //caso o eval não retorna como algo verdadeiro ele executa o alert
                     alert('Conta inválida');
                     return;
@@ -16,7 +16,7 @@ function criaCalculadora(){
             
             }catch(e){
                 alert('conta inválida');
-                return
+                return;
             }
 
         },
